@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    background-image: url(assets/images/bg.jpg);
+    background-position: center center;
+    background-size: max(1200px, 100vw);
+    background-repeat: no-repeat;
+    height: 70vh;
+    position: relative;
+}
+
+.main .box {
+    height: 70vh;
+    width: 100%;
+    opacity: 0.69;
+    position: absolute;
+    top: 0;
+    background-color: black;
+
+}
+
+nav {
+    max-width: 60vw;
+    justify-content: space-between;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+nav img {
+    color: red;
+    width: 130px;
+    position: relative;
+    z-index: 10;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.hero {
+    font-family: 'Martel Sans', sans-serif;
+    height: calc(100% - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    gap: 23px;
+    padding: 0 30px;
+}
+
+.hero> :nth-child(1) {
+    font-family: "poppins";
+    font-weight: bolder;
+    font-size: 48px;
+    text-align: center;
+}
+
+.hero>:nth-child(2) {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+}
+
+.hero>:nth-child(2) {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}
+
+.sepration {
+    height: 11px;
+    background-color: rgb(46, 44, 44);
+    position: relative;
+    z-index: 20;
+}
+
+.btn {
+    padding: 3px 8px;
+    font-weight: 400;
+    color: white;
+    background-color: rgba(248, 243, 243, 0.021);
+    border-radius: 1px solid white;
+    cursor: pointer;
+
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+    padding: 3px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+    font-size: 400;
+}
+
+.btn-red-sm {
+    background-color: red;
+    color: white;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 16px;
+
+}
+
+.main input {
+    padding: 7px 101px 8px 14px;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: rgb(23, 23, 23, 0.2);
+    border: 1px solid rgb(246, 238, 238, 0.5);
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    max-width: 77vw;
+    margin: auto;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.secimg img {
+    z-index: 10;
+}
+
+.secimg video {
+    position: relative;
+    bottom: 53.5vh;
+    left: 4.5vw;
+    z-index: 0;
+}
+
+@media screen and (max-width: 1300px) {
+    .first {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* 🟥 Navbar */
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        max-width: 90vw;
+        height: auto;
+        padding-top: 20px;
+    }
+
+    /* 🎬 Hero Section */
+    .hero> :nth-child(1) {
+        font-size: 30px;
+    }
+
+    .hero> :nth-child(2),
+    .hero> :nth-child(3) {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .main input {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .btn-red {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* 📺 Image + Video Section */
+    .first {
+        flex-direction: column;
+        text-align: center;
+        max-width: 90vw;
+    }
+
+    .secimg img,
+    .secimg video {
+        width: 100%;
+        position: static;
+    }
+
+    .secimg {
+        width: 100%;
+    }
+
+    section.first>div :first-child {
+        font-size: 30px;
+    }
+
+    section.first>div :nth-child(2) {
+        font-size: 18px;
+    }
+
+    /* ❓ FAQ Boxes */
+    .faqbox {
+        flex-direction: column;
+        font-size: 18px;
+        padding: 16px;
+    }
+
+    .faq h2 {
+        font-size: 30px;
+    }
+
+    /* 🔻 Footer */
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .footer-item {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
